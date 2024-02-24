@@ -69,6 +69,11 @@ function displayAlert(text, action){
     }, 1000)
 
 }
+
+// clearItem 
+function clearItem(){
+    const items = document.querySelectorAll(".grocery-item");
+}
 // set back to default
 function setBackToDefault(){
     grocery.value = "";
