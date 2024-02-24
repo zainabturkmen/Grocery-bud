@@ -14,7 +14,8 @@ let editId = "";
 
 // ****** EVENT LISTENERS **********
 form.addEventListener("submit", addItem)
-
+// clear button
+clearBtn.addEventListener("click", clearItem)
 // ****** FUNCTIONS **********
 function addItem(e){
     e.preventDefault();
