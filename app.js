@@ -9,7 +9,7 @@
 
 // edit option
 let editElement;
-let editFlag;
+let editFlag = false;
 let editId = "";
 
 // ****** EVENT LISTENERS **********
@@ -19,7 +19,23 @@ form.addEventListener("submit", addItem)
 function addItem(e){
     e.preventDefault();
     const value = grocery.value;
-    const id = new Date().getTime().toString()
+    const id = new Date().getTime().toString();
+
+    if(value && !editFlag){
+        console.log("add items");
+    } 
+    else if(value && editFlag){
+        console.log("editing")
+    } 
+    else{
+        alert.textContent = "Empty Value"
+        alert.classList.add("alert-danger")
+    }
+}
+
+// display alert
+function displayAlert(){
+    
 }
 // ****** LOCAL STORAGE **********
 
