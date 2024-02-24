@@ -73,6 +73,8 @@ function displayAlert(text, action){
 // clearItem 
 function clearItem(){
     const items = document.querySelectorAll(".grocery-item");
+    
+    if(items.length)
 }
 // set back to default
 function setBackToDefault(){
