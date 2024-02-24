@@ -1,7 +1,7 @@
 // ****** SELECT ITEMS **********
  const alert = document.querySelector(".alert");
  const form = document.querySelector(".grocery-form");
- const grocery = document.querySelector(".grocery");
+ const grocery = document.getElementById("grocery");
  const submitBtn = document.querySelector(".submit-btn");
  const groceryContainer = document.querySelector(".grocery-container");
  const groceryList = document.querySelector(".grocery-list");
@@ -13,9 +13,14 @@ let editFlag;
 let editId = "";
 
 // ****** EVENT LISTENERS **********
+form.addEventListener("submit", addItem)
 
 // ****** FUNCTIONS **********
-
+function addItem(e){
+    e.preventDefault();
+    const value = grocery.value;
+    const id = new Date().getTime().toString()
+}
 // ****** LOCAL STORAGE **********
 
 // ****** SETUP ITEMS **********
