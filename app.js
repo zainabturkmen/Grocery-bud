@@ -90,13 +90,15 @@ function clearItem(){
 
     groceryContainer.classList.remove("show-container")
     displayAlert("empty list", "danger")
+    setBackToDefault()
 }
-
+// delet funtion
 function deleteItem(){
     
 }
 
-function deleteItem(){
+// edit function
+function editItem(){
 
 }
 // set back to default
