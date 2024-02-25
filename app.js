@@ -41,7 +41,10 @@ function addItem(e){
                     </button>
                     </div>`;
 
-                    
+        const deleteBtn = element.querySelector(".delete-btn");
+        const editBtn = element.querySelector(".edit-btn");
+        deleteBtn.addEventListener("click", deleteItem)
+        editBtn.addEventListener("click", editItem)           
 
         // Append child
         groceryList.appendChild(element);
@@ -89,10 +92,7 @@ function clearItem(){
     setBackToDefault()
 }
 
-const deleteBtn = document.querySelector(".delete-btn");
-const editBtn = document.querySelector(".edit-btn");
-deleteBtn.addEventListener("click", deleteItem)
-editBtn.addEventListener("click", editItem)
+
 
 // delet funtion
 function deleteItem(){
