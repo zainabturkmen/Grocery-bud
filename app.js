@@ -15,7 +15,8 @@ let editId = "";
 // ****** EVENT LISTENERS **********
 form.addEventListener("submit", addItem)
 // clear button
-clearBtn.addEventListener("click", clearItem)
+clearBtn.addEventListener("click", clearItem);
+
 // ****** FUNCTIONS **********
 function addItem(e){
     e.preventDefault();
@@ -39,6 +40,13 @@ function addItem(e){
                         <i class="fas fa-trash"></i> 
                     </button>
                     </div>`
+        const deleteBtn = document.querySelector(".delete-btn");
+        const editBtn = document.querySelector(".edit-btn");
+        deleteBtn.addEventListener("click", deleteItem)
+        deleteBtn.addEventListener("click", editItem)
+
+
+
         // Append child
         groceryList.appendChild(element);
         // display alert
@@ -73,8 +81,23 @@ function displayAlert(text, action){
 // clearItem 
 function clearItem(){
     const items = document.querySelectorAll(".grocery-item");
+
+    if(items.length > 0){
+        items.forEach(function(item){
+            groceryList.removeChild(item);
+        })
+    }
+
+    groceryContainer.classList.remove("show-container")
+    displayAlert("empty list", "danger")
+}
+
+function deleteItem(){
     
-    if(items.length)
+}
+
+function deleteItem(){
+
 }
 // set back to default
 function setBackToDefault(){
