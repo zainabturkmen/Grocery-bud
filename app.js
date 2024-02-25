@@ -39,13 +39,9 @@ function addItem(e){
                     <button type="button" class="delete-btn">
                         <i class="fas fa-trash"></i> 
                     </button>
-                    </div>`
-        const deleteBtn = document.querySelector(".delete-btn");
-        const editBtn = document.querySelector(".edit-btn");
-        deleteBtn.addEventListener("click", deleteItem)
-        deleteBtn.addEventListener("click", editItem)
+                    </div>`;
 
-
+                    
 
         // Append child
         groceryList.appendChild(element);
@@ -92,14 +88,20 @@ function clearItem(){
     displayAlert("empty list", "danger")
     setBackToDefault()
 }
+
+const deleteBtn = document.querySelector(".delete-btn");
+const editBtn = document.querySelector(".edit-btn");
+deleteBtn.addEventListener("click", deleteItem)
+editBtn.addEventListener("click", editItem)
+
 // delet funtion
 function deleteItem(){
-    
+    console.log("delete")
 }
 
 // edit function
 function editItem(){
-
+    console.log("edit");
 }
 // set back to default
 function setBackToDefault(){
