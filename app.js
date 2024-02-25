@@ -92,11 +92,10 @@ function clearItem(){
     setBackToDefault()
 }
 
-
-
 // delet funtion
-function deleteItem(){
-    console.log("delete")
+function deleteItem(e){
+    const element = e.currentTarget.parentElement.parentElement;
+    groceryList.removeChild(element)
 }
 
 // edit function
